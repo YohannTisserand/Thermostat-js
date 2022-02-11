@@ -24,4 +24,12 @@ describe('Thermostat', () => {
     }
     expect(thermostat.getTemperature()).toBe(25);
   });
+
+  it('allows to increase the temperature if the PSM is off', () => {
+    thermostat.setPowerSavingMode(false)
+    for (let i = 0; i < 32; i++) {
+      thermostat.up()
+    }
+    expect(thermostat.getTemperature()).toBe(32);
+  });
 });

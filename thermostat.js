@@ -21,7 +21,7 @@ class Thermostat {
   }
 
   setPowerSavingMode(boolean) {
-    if (this.powerSavingMode === false) {
+    if (boolean === false) {
       this.powerSavingMode = false
       this.PSM_MAX = 32
     }
