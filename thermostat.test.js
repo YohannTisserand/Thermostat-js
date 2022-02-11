@@ -7,8 +7,14 @@ describe('Thermostat', () => {
     expect(thermostat.getTemperature()).toBe(20);
   });
 
-  it('can raise the temperature', () => {
+  it('can increase the temperature', () => {
     thermostat.up()
     expect(thermostat.getTemperature()).toBe(21);
+  });
+
+  it('can descrease the temperature', () => {
+    thermostat.down()
+    thermostat.down()
+    expect(thermostat.getTemperature()).toBe(19);
   });
 });
