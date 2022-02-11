@@ -32,4 +32,9 @@ describe('Thermostat', () => {
     }
     expect(thermostat.getTemperature()).toBe(32);
   });
+
+  it('allows to reset the thermostat', () => {
+    thermostat.reset()
+    expect(thermostat.getTemperature()).toBe(20);
+  });
 });

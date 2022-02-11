@@ -27,6 +27,10 @@ class Thermostat {
     }
     this.PSM_MAX
   }
+
+  reset() {
+    this.temperature = 20;
+  }
 }
 
 module.exports = Thermostat
