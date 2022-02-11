@@ -17,4 +17,11 @@ describe('Thermostat', () => {
     thermostat.down()
     expect(thermostat.getTemperature()).toBe(19);
   });
+
+  it('prevent to increase the temperature more than 25 when PSM is on', () => {
+    for (let i = 0; i < 7; i++) {
+      thermostat.up()
+    }
+    expect(thermostat.getTemperature()).toBe(25);
+  });
 });
